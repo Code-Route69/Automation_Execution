@@ -10,7 +10,7 @@ public class ConfigurationUtil implements AutomationContants{
 	static {
 		try {
 			property = new Properties();
-			property.load(new FileReader(propertyPath));
+			property.load(new FileReader(PROPERTY_PATH));
 			
 			
 		} catch (IOException e) {
