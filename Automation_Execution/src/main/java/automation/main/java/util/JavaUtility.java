@@ -42,53 +42,19 @@ public class JavaUtility {
 		long upper = 0;
 		random = new Random();
 		switch (digit) {
-		case 1:
-			lower = 0;
-			upper = 9;
-			break;
-		case 2:
-			lower = 10;
-			upper = 99;
-			break;
-		case 3:
-			lower = 100;
-			upper = 999;
-			break;
-		case 4:
-			lower = 1000;
-			upper = 9999;
-			break;
-		case 5:
-			lower = 10000;
-			upper = 99999;
-			break;
-		case 6:
-			lower = 100000;
-			upper = 999999;
-			break;
-		case 7:
-			lower = 1000000;
-			upper = 9999999;
-			break;
-		case 8:
-			lower = 10000000;
-			upper = 99999999;
-			break;
-		case 9:
-			lower = 100000000;
-			upper = 999999999;
-			break;
-		case 10:
-			lower = 1000000000;
-			upper = 9999999999l;
-			break;
-
-		default:
-			lower = 0;
-			upper = 0;
-			break;
+		case 1 -> {	lower = 0;upper = 9;}
+		case 2 -> {	lower = 10;upper = 99;}
+		case 3 -> {	lower = 100;upper = 999;}
+		case 4 -> {	lower = 1000;upper = 9999;}
+		case 5 -> {	lower = 10000;upper = 99999;}
+		case 6 -> {	lower = 100000;upper = 999999;}
+		case 7 -> {	lower = 1000000;upper = 9999999;}
+		case 8 -> {	lower = 10000000;upper = 99999999;}
+		case 9 -> {	lower = 100000000;upper = 999999999;}
+		case 10 -> {lower = 1000000000;upper = 9999999999l;}
+		default -> throw new IllegalArgumentException("Please Enter Valid Digit bwteen 1 and 10");
 		}
-		return random.nextLong(lower, upper);
+		return lower + random.nextInt((int)(upper - lower + 1));
 	}
 
 //	public int autoIncrement(int num) {

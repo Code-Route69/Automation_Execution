@@ -24,7 +24,6 @@ public class ExcelFileUtility {
 			input = new FileInputStream(path);
 			book = WorkbookFactory.create(input);
 		} catch (EncryptedDocumentException | IOException e) {
-			e.printStackTrace();
 			throw new RuntimeException("Failed to initialize ExcelFileUtility for path: " + path, e);
 		}
 		sheet = book.getSheet(sheetName);
