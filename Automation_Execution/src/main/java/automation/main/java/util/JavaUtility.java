@@ -4,21 +4,38 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Random;
-
+/**
+ * This class is used to get the current system date and time
+ * 
+ * @author Ravi Shankar
+ *
+ */	
 public class JavaUtility {
 	LocalDate date;
 	LocalTime time;
 	Random random;
-
+	/**
+	 * This method is used to get the current system date and time
+	 */
 	public JavaUtility() {
 		date = LocalDate.now();
 		time = LocalTime.now();
 	}
+	/**
+	 * This method is used to get the current system date
+	 * 
+	 * @return
+	 */
 
 	public int getRandomNumber(int lower, int upper) {
 		Random random = new Random();
 		return random.nextInt(lower, upper);
 	}
+	/**
+	 * This method is used to get the current system date
+	 * 
+	 * @return
+	 */
 
 	public long getRandomNumber(int digit) {
 		long lower = 0;
@@ -78,19 +95,36 @@ public class JavaUtility {
 //		
 //		return num++;
 //	}
+	/**
+	 * This method is used to get the current system date
+	 * 
+	 * @return
+	 */
 
 	public String sysDate() {
 		return String.valueOf(date);
 	}
-
+	/**
+	 * This method is used to get the current system time
+	 * 
+	 * @return
+	 */
 	public String sysTime() {
 		return String.valueOf(date);
 	}
-
+	/**
+	 * This method is used to get the current system date
+	 * 
+	 * @return
+	 */
 	public String sysDate(String Format) {
 		return DateTimeFormatter.ofPattern("dd-MM-YYYY").format(date);
 	}
-
+	/**
+	 * This method is used to get the current system time
+	 * 
+	 * @return
+	 */
 	public String modDate(int day, String format) {
 		DateTimeFormatter.ofPattern(format).format(date);
 		return date.plusDays(day).toString();
