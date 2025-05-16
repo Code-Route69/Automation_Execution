@@ -28,7 +28,7 @@ public class JavaUtility {
 	 */
 
 	public int getRandomNumber(int lower, int upper) {
-		Random random = new Random();
+		random = new Random();
 		return random.nextInt(lower, upper);
 	}
 	/**
@@ -40,7 +40,7 @@ public class JavaUtility {
 	public long getRandomNumber(int digit) {
 		long lower = 0;
 		long upper = 0;
-		Random random = new Random();
+		random = new Random();
 		switch (digit) {
 		case 1:
 			lower = 0;
