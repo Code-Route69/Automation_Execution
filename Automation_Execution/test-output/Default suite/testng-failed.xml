@@ -3,20 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.test.runner.Script24_ExampleRunner">
+      <class name="automation.test.runner.Script26_Amazon">
         <methods>
-          <include name="beforeSuiteMethod"/>
-          <include name="beforeMethod"/>
-          <include name="test2"/>
-          <include name="afterTestMethod"/>
-          <include name="beforeClassMethod"/>
-          <include name="afteSuiteMethod"/>
-          <include name="beforeTestMethod"/>
-          <include name="afterMethod"/>
-          <include name="test3"/>
-          <include name="afterClassMethod"/>
+          <include name="TestEndToEnd"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- automation.test.runner.Script24_ExampleRunner -->
+      </class> <!-- automation.test.runner.Script26_Amazon -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
