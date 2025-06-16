@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.test.runner.Script26_Amazon">
+      <class name="automation.test.runner.Script27_ExcelUserCreation">
         <methods>
-          <include name="TestEndToEnd"/>
-          <include name="close"/>
+          <include name="userCreationTest"/>
+          <include name="browserTearDown"/>
+          <include name="browserSetup"/>
+          <include name="applicationTearDown"/>
+          <include name="applicationSetup"/>
         </methods>
-      </class> <!-- automation.test.runner.Script26_Amazon -->
+      </class> <!-- automation.test.runner.Script27_ExcelUserCreation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
