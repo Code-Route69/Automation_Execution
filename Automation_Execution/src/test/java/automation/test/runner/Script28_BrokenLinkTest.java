@@ -1,7 +1,7 @@
 package automation.test.runner;
 
 import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.URI;
 import java.time.Duration;
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class Script28_BrokenLinkTest {
 			}
 			
 			try {
-				HttpURLConnection connect = (HttpURLConnection) (new URL(url).openConnection());
+				HttpURLConnection connect = (HttpURLConnection) (URI.create(url).toURL().openConnection());
 				connect.setRequestMethod("HEAD");
 				connect.connect();
 				if (connect.getResponseCode()>=400) {
@@ -56,7 +56,7 @@ public class Script28_BrokenLinkTest {
 			}
 
 			try {
-				HttpURLConnection connect = (HttpURLConnection) (new URL(url).openConnection());
+				HttpURLConnection connect = (HttpURLConnection) (URI.create(url).toURL().openConnection());
 				connect.setRequestMethod("HEAD");
 				connect.connect();
 				if (connect.getResponseCode() >= 400) {
@@ -85,7 +85,7 @@ public class Script28_BrokenLinkTest {
 			}
 
 			try {
-				HttpURLConnection connect = (HttpURLConnection) (new URL(url).openConnection());
+				HttpURLConnection connect = (HttpURLConnection) (URI.create(url).toURL().openConnection());
 				connect.setRequestMethod("HEAD");
 				connect.connect();
 				if (connect.getResponseCode() >= 400) {
