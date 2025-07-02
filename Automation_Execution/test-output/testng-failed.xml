@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.test.runner.Script27_ExcelUserCreation">
+      <class name="automation.test.runner.Script33_AutomationExercise">
         <methods>
-          <include name="userCreationTest"/>
-          <include name="browserTearDown"/>
-          <include name="browserSetup"/>
-          <include name="applicationTearDown"/>
-          <include name="applicationSetup"/>
+          <include name="testCase1"/>
+          <include name="tearDown"/>
+          <include name="config"/>
         </methods>
-      </class> <!-- automation.test.runner.Script27_ExcelUserCreation -->
+      </class> <!-- automation.test.runner.Script33_AutomationExercise -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
