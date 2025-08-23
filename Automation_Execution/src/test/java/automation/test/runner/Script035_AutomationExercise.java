@@ -102,7 +102,6 @@ public class Script035_AutomationExercise {
 		boolean found = false;
 		System.out.print( "Please Enter The Country Name : " );
 		String country = scanner.nextLine( );
-		// Stream-based loop for max 24 pages
 		while ( !found && page <= 24 ) {
 			List< WebElement > countries = util.finds( Locator.XPATH,
 			            "(//table[@class='datatable w-full border border-zinc-200 datatable-table'])[4]/tbody/tr/td[2]" );
@@ -395,7 +394,7 @@ public class Script035_AutomationExercise {
 			            String currentUrl = driver.getCurrentUrl( );
 			            if ( currentUrl.contains( "facebook" ) ) {
 				            System.out.println( "Facebook validation passed: " + currentUrl );
-			            } else if ( currentUrl.contains( "twitter" ) ) {
+			            } else if ( currentUrl.contains( "x" ) ) {
 				            System.out.println( "Twitter validation passed: " + currentUrl );
 			            } else if ( currentUrl.contains( "instagram" ) ) {
 				            System.out.println( "Instagram validation passed: " + currentUrl );
