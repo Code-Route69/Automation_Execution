@@ -1,7 +1,5 @@
 package automation.test.runner;
 
-import static org.openqa.selenium.support.locators.RelativeLocator.with;
-
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -33,6 +32,29 @@ import automation.main.webdriver.util.Locator;
 import automation.main.webdriver.util.WebElementUtil;
 import graphql.Assert;
 
+/**
+ * 
+ * @author Ravisankar
+ * @see 
+ * 1. CricBuzz - Get the Country and Rating of a Player
+ * 2. Olympics - Get the Player Names for a particular Event
+ * 3. WorldoMeters - Search for a Country in the Population Table
+ * 4. CricBuzz - Get the Player Name and Country for a given Rating
+ * 5. WorldoMeters - Get the Undernourished Population for a Country
+ * 6. BBC Olympics - Get the Winning Countries for a particular Game
+ * 7. BBC Cricket - Get the Rating of a Country in Test Format
+ * 8. BBC Cricket - Get the Rating of a Country in T20 Format
+ * 9. Olympics 2020 - Get the Country of a Player in a particular Event
+ * 10. RedBus - Get the Available Seats and Price for a particular Bus and Store it in Excel
+ * 11. Kushals - Print all the Texts in the Page
+ * 12. Manapuram - Gold Loan Calculator with DataProvider
+ * 13. Manyavar - Social Media Links
+ * 14. JosAlukkas - Social Media Links
+ * @since 22-07-2025
+ * @category Automation Exercise
+ * @discription This class contains multiple test scripts that automate various web interactions using Selenium WebDriver.
+ *
+ */
 public class Script035_AutomationExercise {
 	WebDriver      driver;
 	SoftAssert     soft;
@@ -42,6 +64,15 @@ public class Script035_AutomationExercise {
 	Scanner        scanner;
 	Select         select;
 
+	/**
+	 * This method sets up the WebDriver and initializes various utilities before the tests are run.
+	 * @see ChromeOptions
+	 * @see WebElementUtil
+	 * @see Actions
+	 * @see WebDriverWait
+	 * @see SoftAssert
+	 * @see Scanner
+	 */
 	@BeforeTest
 	public void setUp( ) {
 		driver = new ChromeDriver( new ChromeOptions( )
@@ -59,6 +90,9 @@ public class Script035_AutomationExercise {
 		scanner = new Scanner( System.in );
 	}
 
+	/**
+	* This test navigates to the CricBuzz website, accesses the rankings page, and retrieves the country and rating of a specified player.
+	 */
 	@Test
 	public void cricBuzz1( ) {
 		driver.get( "https://www.cricbuzz.com/" );
@@ -72,6 +106,9 @@ public class Script035_AutomationExercise {
 
 	}
 
+	/**
+	 * This test navigates to the Olympics website, accesses the results page, and retrieves player names for a specified event.
+	 */
 	@Test
 	public void olympics( ) {
 		driver.get( "https://www.olympics.com/en/olympic-games/tokyo-2020" );
@@ -92,6 +129,9 @@ public class Script035_AutomationExercise {
 		            + util.find( Locator.XPATH, "//h3[@data-cy='athlete-name' and text()='" + name + "']/preceding::div[@data-cy='flag-with-label']" ).getText( ) );
 	}
 
+	/**
+	 * This test navigates to the WorldoMeters website and searches for a specified country in the population table, handling pagination if necessary.
+	 */
 	@Test
 	public void worldoMeters1( ) {
 		driver.get( "https://www.worldometers.info/world-population/" );
@@ -125,6 +165,9 @@ public class Script035_AutomationExercise {
 		}
 	}
 
+	/**
+	 * This test navigates to the CricBuzz website, accesses the rankings page, and retrieves the player name and country for a specified rating.
+	 */
 	@Test
 	public void cricBuzz2( ) {
 		driver.get( "https://www.cricbuzz.com/" );
@@ -138,6 +181,10 @@ public class Script035_AutomationExercise {
 
 	}
 
+	/**
+	 * This test navigates to the WorldoMeters website, selects an option from a dropdown, chooses a country, and retrieves the undernourished population for that country.
+	 * It also interacts with a chart to display additional data points.
+	 */
 	@Test
 	public void worldoMeter2( ) throws InterruptedException {
 		driver.get( "https://www.worldometers.info/geography/countries-of-the-world/" );
@@ -176,6 +223,9 @@ public class Script035_AutomationExercise {
 		            } );
 	}
 
+	/**
+	 * This test navigates to the BBC Olympics website, selects options from dropdowns, and retrieves the winning countries for a specified game
+	 */
 	@Test
 	public void bbcOlympics( ) {
 		driver.get( "https://www.bbc.com/sport/olympics/paris-2024/medals" );
@@ -207,6 +257,9 @@ public class Script035_AutomationExercise {
 		util.finds( Locator.XPATH, "//div[@class='ssrcss-fy4lnm-PrimaryName e1dg50ic1']" ).stream( ).map( WebElement::getText ).forEach( System.out::println );
 	}
 
+	/**
+	 * This test navigates to the BBC Cricket website and retrieves the rating of a specified country in Test format.
+	 */
 	@Test
 	public void bbcCricketTest( ) {
 
@@ -218,6 +271,9 @@ public class Script035_AutomationExercise {
 
 	}
 
+	/**
+	 * This test navigates to the BBC Cricket website and retrieves the rating of a specified country in T20 format.
+	 */
 	@Test
 	public void bbcCricketT20( ) {
 
@@ -230,6 +286,9 @@ public class Script035_AutomationExercise {
 
 	}
 
+	/**
+	 * This test navigates to the Olympics 2020 website, accesses the results page, and retrieves player names for a specified event.
+	 */
 	@Test
 	public void olympics2020( ) {
 		driver.get( "https://www.olympics.com/en/olympic-games/tokyo-2020" );
@@ -255,6 +314,9 @@ public class Script035_AutomationExercise {
 		            + util.find( Locator.XPATH, "//h3[@data-cy='athlete-name' and text()='" + name + "']/preceding::div[@data-cy='flag-with-label']" ).getText( ) );
 	}
 
+	/**
+	 * This test navigates to the RedBus website, searches for buses between two cities on a specified date, retrieves available seats and prices for a selected bus, and stores the information in an Excel file.
+	 */
 	@Test
 	public void redBus( ) {
 		driver.get( "https://www.redbus.in/" );
@@ -295,12 +357,20 @@ public class Script035_AutomationExercise {
 		excel.outClose( );
 	}
 
+	/**
+	 * This test navigates to the Kushals website and prints all non-empty text elements on the page.
+	 */
 	@Test( enabled = false )
 	public void kushalsApp( ) {
 		driver.get( "https://www.kushals.com/" );
 		util.finds( Locator.XPATH, "//*" ).stream( ).map( WebElement::getText ).filter( s -> !s.isEmpty( ) ).forEach( System.out::println );
 	}
 
+	/**
+	 * This DataProvider reads data from an Excel file and provides it to the manapuram test method.
+	 * Each row in the Excel file represents a set of input parameters for the test.	
+	 * @return A 2D array of Strings containing the test data.
+	 */
 	@DataProvider
 	public String[ ][ ] manapuramClient( ) {
 		ExcelFileUtility excel = new ExcelFileUtility( "C:\\Users\\ravis\\OneDrive\\Documents\\TekPyramid\\Automation Exercise.xlsx", "Manapuram Client" );
@@ -313,6 +383,20 @@ public class Script035_AutomationExercise {
 		return data;
 	}
 
+	/**
+	 * This test navigates to the Manapuram website, fills out the Gold Loan Calculator form with data provided by the manapuramClient DataProvider,
+	 * and verifies the eligibility for a loan amount based on the input data.
+	 * 
+	 * @param type     The type of test case (positive/negative).
+	 * @param name     The name of the applicant.
+	 * @param contact  The contact number of the applicant.
+	 * @param email    The email address of the applicant.
+	 * @param state    The state where the applicant resides.
+	 * @param goldtype The type of gold being used for the loan.
+	 * @param city     The city where the applicant resides.
+	 * @param gold     The weight of the gold in grams.
+	 * @param amount   The amount required for the loan.
+	 */
 	@Test( dataProvider = "manapuramClient" )
 	public void manapuram( String type, String name, String contact, String email, String state, String goldtype, String city, String gold, String amount ) {
 		driver.get( "https://www.manappuram.com/gold-loan" );
@@ -377,6 +461,10 @@ public class Script035_AutomationExercise {
 //
 //	}
 
+	/**
+	 * This test navigates to the JosAlukkas website and verifies the functionality of social media links (Facebook, Twitter, Instagram).
+	 * It clicks on each social media icon, switches to the new window, validates the URL, and then closes the window.
+	 */
 	@Test
 	public void josaluka( ) {
 		driver.get( "https://www.josalukkaseasybuy.com" );
@@ -409,6 +497,9 @@ public class Script035_AutomationExercise {
 
 	}
 
+	/**
+	 * This method closes the Scanner and quits the WebDriver after all tests have been executed.
+	 */
 	@AfterTest
 	public void tearDown( ) {
 		scanner.close( );
