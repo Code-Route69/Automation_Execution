@@ -23,10 +23,11 @@ public class Script30_CalendarPopUp {
 	@Test
 	public void redBus() {
 		driver.get("https://www.redbus.in/");
-		driver.findElement(By.xpath("//div[@role='button' and @class='srcDestWrapper___e67e69']")).click();
+		driver.findElement(By.xpath("//div[.='From']")).click();
+		driver.findElement(By.xpath("//input[@id='srcDest']")).sendKeys( "Bangalore" );
 		driver.findElement(By.xpath("//div[text()='Bangalore' and @class='listHeader___90a8b7' ]")).click();
-		driver.findElement(By.xpath("//div[text()='To']")).click();
-		driver.findElement(By.xpath("//div[@class='listHeader___90a8b7']")).click();
+//		driver.findElement(By.xpath("//div[text()='To']")).click();
+//		driver.findElement(By.xpath("//div[@class='listHeader___90a8b7']")).click();
 		
 	}
 	

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="12" total="13" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-24T13:21:25 IST" name="Default suite" finished-at="2025-06-24T13:21:45 IST" duration-ms="19591">
+  <suite started-at="2025-08-22T18:19:18 IST" name="Default suite" finished-at="2025-08-22T18:19:49 IST" duration-ms="30992">
     <groups>
     </groups>
-    <test started-at="2025-06-24T13:21:25 IST" name="Default test" finished-at="2025-06-24T13:21:45 IST" duration-ms="19591">
-      <class name="automation.test.runner.Script33_AutomationExercise">
-        <test-method is-config="true" signature="config()[pri:0, instance:automation.test.runner.Script33_AutomationExercise@4d1c00d0]" started-at="2025-06-24T13:21:25 IST" name="config" finished-at="2025-06-24T13:21:39 IST" duration-ms="14082" status="PASS">
+    <test started-at="2025-08-22T18:19:18 IST" name="Default test" finished-at="2025-08-22T18:19:49 IST" duration-ms="30992">
+      <class name="automation.test.runner.Script035_AutomationExercise">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:automation.test.runner.Script035_AutomationExercise@1757cd72]" started-at="2025-08-22T18:19:18 IST" name="setUp" finished-at="2025-08-22T18:19:20 IST" duration-ms="1786" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- config -->
-        <test-method signature="testCase1()[pri:0, instance:automation.test.runner.Script33_AutomationExercise@4d1c00d0]" started-at="2025-06-24T13:21:39 IST" name="testCase1" finished-at="2025-06-24T13:21:44 IST" duration-ms="5148" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="worldoMeter2()[pri:0, instance:automation.test.runner.Script035_AutomationExercise@1757cd72]" started-at="2025-08-22T18:19:20 IST" name="worldoMeter2" finished-at="2025-08-22T18:19:49 IST" duration-ms="28895" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testCase1 -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.test.runner.Script33_AutomationExercise@4d1c00d0]" started-at="2025-06-24T13:21:44 IST" name="tearDown" finished-at="2025-06-24T13:21:45 IST" duration-ms="306" status="PASS">
+        </test-method> <!-- worldoMeter2 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.test.runner.Script035_AutomationExercise@1757cd72]" started-at="2025-08-22T18:19:49 IST" name="tearDown" finished-at="2025-08-22T18:19:49 IST" duration-ms="264" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.test.runner.Script33_AutomationExercise -->
+      </class> <!-- automation.test.runner.Script035_AutomationExercise -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
