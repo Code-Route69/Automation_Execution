@@ -34,25 +34,23 @@ import graphql.Assert;
 
 /**
  * 
- * @author Ravisankar
- * @see 
- * 1. CricBuzz - Get the Country and Rating of a Player
- * 2. Olympics - Get the Player Names for a particular Event
- * 3. WorldoMeters - Search for a Country in the Population Table
- * 4. CricBuzz - Get the Player Name and Country for a given Rating
- * 5. WorldoMeters - Get the Undernourished Population for a Country
- * 6. BBC Olympics - Get the Winning Countries for a particular Game
- * 7. BBC Cricket - Get the Rating of a Country in Test Format
- * 8. BBC Cricket - Get the Rating of a Country in T20 Format
- * 9. Olympics 2020 - Get the Country of a Player in a particular Event
- * 10. RedBus - Get the Available Seats and Price for a particular Bus and Store it in Excel
- * 11. Kushals - Print all the Texts in the Page
- * 12. Manapuram - Gold Loan Calculator with DataProvider
- * 13. Manyavar - Social Media Links
- * 14. JosAlukkas - Social Media Links
+ * @author Ravi Shankar
+ * @see 1. CricBuzz - Get the Country and Rating of a Player 2. Olympics - Get
+ *      the Player Names for a particular Event 3. WorldoMeters - Search for a
+ *      Country in the Population Table 4. CricBuzz - Get the Player Name and
+ *      Country for a given Rating 5. WorldoMeters - Get the Undernourished
+ *      Population for a Country 6. BBC Olympics - Get the Winning Countries for
+ *      a particular Game 7. BBC Cricket - Get the Rating of a Country in Test
+ *      Format 8. BBC Cricket - Get the Rating of a Country in T20 Format 9.
+ *      Olympics 2020 - Get the Country of a Player in a particular Event 10.
+ *      RedBus - Get the Available Seats and Price for a particular Bus and
+ *      Store it in Excel 11. Kushals - Print all the Texts in the Page 12.
+ *      Manapuram - Gold Loan Calculator with DataProvider 13. Manyavar - Social
+ *      Media Links 14. JosAlukkas - Social Media Links
  * @since 23-07-2025
  * @category Automation Exercise
- * @discription This class contains multiple test scripts that automate various web interactions using Selenium WebDriver.
+ * @discription This class contains multiple test scripts that automate various
+ *              web interactions using Selenium WebDriver.
  *
  */
 public class Script35_AutomationExercise {
@@ -65,7 +63,9 @@ public class Script35_AutomationExercise {
 	Select         select;
 
 	/**
-	 * This method sets up the WebDriver and initializes various utilities before the tests are run.
+	 * This method sets up the WebDriver and initializes various utilities before
+	 * the tests are run.
+	 * 
 	 * @see ChromeOptions
 	 * @see WebElementUtil
 	 * @see Actions
@@ -91,7 +91,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	* This test navigates to the CricBuzz website, accesses the rankings page, and retrieves the country and rating of a specified player.
+	 * This test navigates to the CricBuzz website, accesses the rankings page, and
+	 * retrieves the country and rating of a specified player.
 	 */
 	@Test
 	public void cricBuzz1( ) {
@@ -107,7 +108,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the Olympics website, accesses the results page, and retrieves player names for a specified event.
+	 * This test navigates to the Olympics website, accesses the results page, and
+	 * retrieves player names for a specified event.
 	 */
 	@Test
 	public void olympics( ) {
@@ -130,7 +132,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the WorldoMeters website and searches for a specified country in the population table, handling pagination if necessary.
+	 * This test navigates to the WorldoMeters website and searches for a specified
+	 * country in the population table, handling pagination if necessary.
 	 */
 	@Test
 	public void worldoMeters1( ) {
@@ -142,7 +145,6 @@ public class Script35_AutomationExercise {
 		boolean found = false;
 		System.out.print( "Please Enter The Country Name : " );
 		String country = scanner.nextLine( );
-		// Stream-based loop for max 24 pages
 		while ( !found && page <= 24 ) {
 			List< WebElement > countries = util.finds( Locator.XPATH,
 			            "(//table[@class='datatable w-full border border-zinc-200 datatable-table'])[4]/tbody/tr/td[2]" );
@@ -166,7 +168,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the CricBuzz website, accesses the rankings page, and retrieves the player name and country for a specified rating.
+	 * This test navigates to the CricBuzz website, accesses the rankings page, and
+	 * retrieves the player name and country for a specified rating.
 	 */
 	@Test
 	public void cricBuzz2( ) {
@@ -182,8 +185,10 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the WorldoMeters website, selects an option from a dropdown, chooses a country, and retrieves the undernourished population for that country.
-	 * It also interacts with a chart to display additional data points.
+	 * This test navigates to the WorldoMeters website, selects an option from a
+	 * dropdown, chooses a country, and retrieves the undernourished population for
+	 * that country. It also interacts with a chart to display additional data
+	 * points.
 	 */
 	@Test
 	public void worldoMeter2( ) throws InterruptedException {
@@ -224,7 +229,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the BBC Olympics website, selects options from dropdowns, and retrieves the winning countries for a specified game
+	 * This test navigates to the BBC Olympics website, selects options from
+	 * dropdowns, and retrieves the winning countries for a specified game
 	 */
 	@Test
 	public void bbcOlympics( ) {
@@ -258,7 +264,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the BBC Cricket website and retrieves the rating of a specified country in Test format.
+	 * This test navigates to the BBC Cricket website and retrieves the rating of a
+	 * specified country in Test format.
 	 */
 	@Test
 	public void bbcCricketTest( ) {
@@ -272,7 +279,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the BBC Cricket website and retrieves the rating of a specified country in T20 format.
+	 * This test navigates to the BBC Cricket website and retrieves the rating of a
+	 * specified country in T20 format.
 	 */
 	@Test
 	public void bbcCricketT20( ) {
@@ -287,7 +295,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the Olympics 2020 website, accesses the results page, and retrieves player names for a specified event.
+	 * This test navigates to the Olympics 2020 website, accesses the results page,
+	 * and retrieves player names for a specified event.
 	 */
 	@Test
 	public void olympics2020( ) {
@@ -315,7 +324,9 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the RedBus website, searches for buses between two cities on a specified date, retrieves available seats and prices for a selected bus, and stores the information in an Excel file.
+	 * This test navigates to the RedBus website, searches for buses between two
+	 * cities on a specified date, retrieves available seats and prices for a
+	 * selected bus, and stores the information in an Excel file.
 	 */
 	@Test
 	public void redBus( ) {
@@ -358,7 +369,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the Kushals website and prints all non-empty text elements on the page.
+	 * This test navigates to the Kushals website and prints all non-empty text
+	 * elements on the page.
 	 */
 	@Test( enabled = false )
 	public void kushalsApp( ) {
@@ -367,8 +379,10 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This DataProvider reads data from an Excel file and provides it to the manapuram test method.
-	 * Each row in the Excel file represents a set of input parameters for the test.	
+	 * This DataProvider reads data from an Excel file and provides it to the
+	 * manapuram test method. Each row in the Excel file represents a set of input
+	 * parameters for the test.
+	 * 
 	 * @return A 2D array of Strings containing the test data.
 	 */
 	@DataProvider
@@ -384,8 +398,9 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This test navigates to the Manapuram website, fills out the Gold Loan Calculator form with data provided by the manapuramClient DataProvider,
-	 * and verifies the eligibility for a loan amount based on the input data.
+	 * This test navigates to the Manapuram website, fills out the Gold Loan
+	 * Calculator form with data provided by the manapuramClient DataProvider, and
+	 * verifies the eligibility for a loan amount based on the input data.
 	 * 
 	 * @param type     The type of test case (positive/negative).
 	 * @param name     The name of the applicant.
@@ -462,8 +477,10 @@ public class Script35_AutomationExercise {
 //	}
 
 	/**
-	 * This test navigates to the JosAlukkas website and verifies the functionality of social media links (Facebook, Twitter, Instagram).
-	 * It clicks on each social media icon, switches to the new window, validates the URL, and then closes the window.
+	 * This test navigates to the JosAlukkas website and verifies the functionality
+	 * of social media links (Facebook, Twitter, Instagram). It clicks on each
+	 * social media icon, switches to the new window, validates the URL, and then
+	 * closes the window.
 	 */
 	@Test
 	public void josaluka( ) {
@@ -498,7 +515,8 @@ public class Script35_AutomationExercise {
 	}
 
 	/**
-	 * This method closes the Scanner and quits the WebDriver after all tests have been executed.
+	 * This method closes the Scanner and quits the WebDriver after all tests have
+	 * been executed.
 	 */
 	@AfterTest
 	public void tearDown( ) {

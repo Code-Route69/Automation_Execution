@@ -51,5 +51,4 @@ public class WebElementUtil {
 			default              -> throw new IllegalArgumentException( "Unexpected value: " + locator );
 		};
 	}
-
 }
