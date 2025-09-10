@@ -1,21 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-04T13:15:56 IST" name="Default suite" finished-at="2025-09-04T13:16:07 IST" duration-ms="11211">
+  <suite started-at="2025-09-09T10:35:39 IST" name="Suite" finished-at="2025-09-09T10:35:47 IST" duration-ms="8103">
     <groups>
     </groups>
-    <test started-at="2025-09-04T13:15:56 IST" name="Default test" finished-at="2025-09-04T13:16:07 IST" duration-ms="11211">
-      <class name="automation.test.runner.Script036_Automation">
-        <test-method signature="cricBuzzPlayersWithIdentityHashMap()[pri:0, instance:automation.test.runner.Script036_Automation@247bddad]" started-at="2025-09-04T13:15:56 IST" name="cricBuzzPlayersWithIdentityHashMap" finished-at="2025-09-04T13:16:07 IST" duration-ms="10805" status="PASS">
+    <test started-at="2025-09-09T10:35:39 IST" name="Test1" finished-at="2025-09-09T10:35:43 IST" duration-ms="4243">
+      <class name="automation.test.runner.Script037_Parallel">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:automation.test.runner.Script037_Parallel@3fc2959f]" started-at="2025-09-09T10:35:39 IST" name="setUp" finished-at="2025-09-09T10:35:41 IST" duration-ms="1824" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cricBuzzPlayersWithIdentityHashMap -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.test.runner.Script036_Automation@247bddad]" started-at="2025-09-04T13:16:07 IST" name="tearDown" finished-at="2025-09-04T13:16:07 IST" duration-ms="340" status="PASS">
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:automation.test.runner.Script037_Parallel@3fc2959f]" started-at="2025-09-09T10:35:41 IST" name="test" finished-at="2025-09-09T10:35:43 IST" duration-ms="1753" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.test.runner.Script037_Parallel@3fc2959f]" started-at="2025-09-09T10:35:43 IST" name="tearDown" finished-at="2025-09-09T10:35:43 IST" duration-ms="598" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- automation.test.runner.Script036_Automation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- automation.test.runner.Script037_Parallel -->
+    </test> <!-- Test1 -->
+    <test started-at="2025-09-09T10:35:39 IST" name="Test2" finished-at="2025-09-09T10:35:47 IST" duration-ms="8103">
+      <class name="automation.test.runner.Script037_Parallel">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:automation.test.runner.Script037_Parallel@291caca8]" started-at="2025-09-09T10:35:39 IST" name="setUp" finished-at="2025-09-09T10:35:44 IST" duration-ms="5434" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="test()[pri:0, instance:automation.test.runner.Script037_Parallel@291caca8]" started-at="2025-09-09T10:35:44 IST" name="test" finished-at="2025-09-09T10:35:45 IST" duration-ms="855" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:automation.test.runner.Script037_Parallel@291caca8]" started-at="2025-09-09T10:35:45 IST" name="tearDown" finished-at="2025-09-09T10:35:47 IST" duration-ms="1760" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- automation.test.runner.Script037_Parallel -->
+    </test> <!-- Test2 -->
+  </suite> <!-- Suite -->
 </testng-results>

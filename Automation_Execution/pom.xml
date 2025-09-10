@@ -17,7 +17,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.11.0</version> <!-- Latest version -->
 				<configuration>
-					<release>21</release> <!-- Better than using source/target -->
+					<release>21</release> <!-- Better than using
+					source/target -->
 				</configuration>
 			</plugin>
 		</plugins>
@@ -31,11 +32,11 @@
 			<version>4.33.0</version>
 		</dependency>
 		<!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-grid -->
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-grid</artifactId>
-			<version>4.34.0</version>
+			<artifactId>selenium-java</artifactId>
+			<version>4.35.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
@@ -120,7 +121,8 @@
 			<artifactId>json-simple</artifactId>
 			<version>1.1.1</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
+		<!--
+		https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc10 -->
 		<dependency>
 			<groupId>com.oracle.database.jdbc</groupId>
 			<artifactId>ojdbc10</artifactId>

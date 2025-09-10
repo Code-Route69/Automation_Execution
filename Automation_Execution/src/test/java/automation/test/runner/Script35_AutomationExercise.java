@@ -19,6 +19,7 @@ import static org.openqa.selenium.support.locators.RelativeLocator.with;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -30,7 +31,6 @@ import automation.main.file.util.ExcelFileUtility;
 import automation.main.java.util.JavaUtility;
 import automation.main.webdriver.util.Locator;
 import automation.main.webdriver.util.WebElementUtil;
-import graphql.Assert;
 
 /**
  * 

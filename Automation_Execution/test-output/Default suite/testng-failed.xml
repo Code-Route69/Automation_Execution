@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="automation.test.runner.Script036_Automation">
+      <class name="automation.test.runner.Script036_AutomatioinExercise">
         <methods>
-          <include name="easeMyTrip"/>
+          <include name="slider"/>
           <include name="tearDown"/>
+          <include name="config"/>
         </methods>
-      </class> <!-- automation.test.runner.Script036_Automation -->
+      </class> <!-- automation.test.runner.Script036_AutomatioinExercise -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
